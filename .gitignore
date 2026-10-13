@@ -17,3 +17,6 @@ lib/duktape-2.7.0/
 .cache/
 compile_commands.json
 compiler_defines.h
+
+tools/__pycache__/
+__pycache__/

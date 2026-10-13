@@ -13,15 +13,16 @@ BLACK = (0, 0, 0)
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
 # order matches MainPage grid: wifi, ble, badusb, subghz / nfc, ir, js, settings
+# per-tile accent colours mirror style.h (CM_WIFI..CM_SETTINGS)
 TILES = [
-    ("wifi", "WiFi", gi.icon_wifi),
-    ("ble", "BLE", gi.icon_ble),
-    ("badusb", "BadUSB", gi.icon_usb),
-    ("subghz", "SubGHz", gi.icon_subghz),
-    ("nfc", "NFC", gi.icon_nfc),
-    ("ir", "IR", gi.icon_ir),
-    ("js", "JS", gi.icon_js),
-    ("settings", "Settings", gi.icon_settings),
+    ("wifi", "WiFi", gi.icon_wifi, (0x2E, 0x9B, 0xFF)),
+    ("ble", "BLE", gi.icon_ble, (0x16, 0xC7, 0xD6)),
+    ("badusb", "BadUSB", gi.icon_usb, (0x39, 0xD3, 0x53)),
+    ("subghz", "SubGHz", gi.icon_subghz, (0xFF, 0xB3, 0x00)),
+    ("nfc", "NFC", gi.icon_nfc, (0x9B, 0x6C, 0xF6)),
+    ("ir", "IR", gi.icon_ir, (0xFF, 0x5A, 0x3C)),
+    ("js", "JS", gi.icon_js, (0xFF, 0xD2, 0x1E)),
+    ("settings", "Settings", gi.icon_settings, (0x9A, 0xA7, 0xB8)),
 ]
 SELECTED = 0  # WiFi selected (lower_limit)
 
@@ -53,7 +54,7 @@ def main():
     f_foot = ImageFont.truetype(FONT, int(13 * SCALE / 1.6))
 
     d.text((W / 2, 30), "CYBERMEOW  ·  HOME", font=f_title, fill=CYAN, anchor="mm")
-    d.text((W / 2, 58), "LilyGO T-Embed CC1101 · real icons · outline tiles, magenta = selected",
+    d.text((W / 2, 58), "LilyGO T-Embed CC1101 · per-tile colours · magenta ring = selected",
            font=f_sub, fill=(125, 136, 148), anchor="mm")
 
     # screen
@@ -70,11 +71,11 @@ def main():
     pad_y = int(12 * SCALE)
     icon_px = int(32 * SCALE * 0.7)
 
-    for i, (key, label, fn) in enumerate(TILES):
+    for i, (key, label, fn, accent) in enumerate(TILES):
         r, c = divmod(i, cols)
         bx = sx + pad_x + c * (cell_w + pad_x)
         by = sy + pad_y + r * (box_h + lbl_h + pad_y)
-        col = MAGENTA if i == SELECTED else TEAL
+        col = MAGENTA if i == SELECTED else accent
         # outline tile
         d.rounded_rectangle([bx, by, bx + cell_w, by + box_h],
                             radius=int(10 * SCALE / 1.5), outline=col, width=3)
