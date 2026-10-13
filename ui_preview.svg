@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" viewBox="0 0 760 470" font-family="'DejaVu Sans', Verdana, sans-serif">
+  <defs>
+    <linearGradient id="bezel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2f36"/>
+      <stop offset="1" stop-color="#15181d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop -->
+  <rect x="0" y="0" width="760" height="470" fill="#0c0f14"/>
+  <text x="380" y="36" fill="#5FD3E0" font-size="20" font-weight="bold" text-anchor="middle" letter-spacing="2">CYBERMEOW UI  ·  HOME SCREEN PREVIEW</text>
+  <text x="380" y="58" fill="#7d8894" font-size="12" text-anchor="middle">LilyGO T-Embed CC1101 · 320×170 landscape · representation of the new theme</text>
+
+  <!-- device bezel -->
+  <rect x="55" y="78" width="650" height="350" rx="22" fill="url(#bezel)" stroke="#000" stroke-width="2"/>
+  <!-- screen 320x170 scaled 2x = 640x340 -->
+  <g transform="translate(60,84)">
+    <rect x="0" y="0" width="640" height="340" rx="8" fill="#000000"/>
+
+    <!-- 2 rows x 4 cols of tiles. Tile ~ 128 wide, rounded. Selected = WiFi (magenta) -->
+    <!-- row 1 -->
+    <!-- WiFi (SELECTED) -->
+    <rect x="24" y="26" width="128" height="86" rx="20" fill="#FF2E88"/>
+    <text x="88" y="140" fill="#FFFFFF" font-size="22" font-weight="bold" text-anchor="middle">WiFi</text>
+    <!-- BLE -->
+    <rect x="176" y="26" width="128" height="86" rx="20" fill="#0AB8D0"/>
+    <text x="240" y="140" fill="#FFFFFF" font-size="22" font-weight="bold" text-anchor="middle">BLE</text>
+    <!-- BadUSB -->
+    <rect x="328" y="26" width="128" height="86" rx="20" fill="#0AB8D0"/>
+    <text x="392" y="140" fill="#FFFFFF" font-size="20" font-weight="bold" text-anchor="middle">BadUSB</text>
+    <!-- SubGHz -->
+    <rect x="480" y="26" width="128" height="86" rx="20" fill="#0AB8D0"/>
+    <text x="544" y="140" fill="#FFFFFF" font-size="20" font-weight="bold" text-anchor="middle">SubGHz</text>
+
+    <!-- row 2 -->
+    <rect x="24" y="178" width="128" height="86" rx="20" fill="#0AB8D0"/>
+    <text x="88" y="292" fill="#FFFFFF" font-size="22" font-weight="bold" text-anchor="middle">NFC</text>
+    <rect x="176" y="178" width="128" height="86" rx="20" fill="#0AB8D0"/>
+    <text x="240" y="292" fill="#FFFFFF" font-size="22" font-weight="bold" text-anchor="middle">IR</text>
+    <rect x="328" y="178" width="128" height="86" rx="20" fill="#0AB8D0"/>
+    <text x="392" y="292" fill="#FFFFFF" font-size="22" font-weight="bold" text-anchor="middle">JS</text>
+    <rect x="480" y="178" width="128" height="86" rx="20" fill="#0AB8D0"/>
+    <text x="544" y="292" fill="#FFFFFF" font-size="20" font-weight="bold" text-anchor="middle">Settings</text>
+
+    <!-- footer status -->
+    <text x="24" y="326" fill="#5FD3E0" font-size="15">CyberMeow v0.5.2</text>
+    <text x="616" y="326" fill="#5FD3E0" font-size="15" text-anchor="end">BAT 100%</text>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(60,440)">
+    <rect x="0" y="-12" width="16" height="16" rx="4" fill="#FF2E88"/>
+    <text x="24" y="1" fill="#c7ced6" font-size="13">selected tile</text>
+    <rect x="150" y="-12" width="16" height="16" rx="4" fill="#0AB8D0"/>
+    <text x="174" y="1" fill="#c7ced6" font-size="13">idle tile</text>
+    <rect x="270" y="-12" width="16" height="16" rx="4" fill="#5FD3E0"/>
+    <text x="294" y="1" fill="#c7ced6" font-size="13">info / status text</text>
+  </g>
+</svg>

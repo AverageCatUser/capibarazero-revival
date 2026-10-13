@@ -1,0 +1,67 @@
+name: Build CyberMeow firmware (T-Embed CC1101)
+
+# Builds the restyled firmware for the LilyGO T-Embed CC1101 and produces a
+# single flashable .bin. Runs on every push and can also be started by hand
+# from the Actions tab (Run workflow). The compiled firmware shows up under
+# the run's "Artifacts" section as "CyberMeow-TEmbed-firmware".
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache PlatformIO
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.platformio/.cache
+          key: ${{ runner.os }}-pio-tembed
+
+      - name: Install PlatformIO + esptool
+        run: pip install --upgrade platformio esptool
+
+      - name: Prepare Duktape library
+        run: bash init_libs.sh
+
+      - name: Build T-Embed CC1101 firmware
+        run: pio run -e lilygo_t_embed_cc1101
+
+      - name: Merge into a single flashable .bin
+        run: |
+          set -e
+          BUILD=.pio/build/lilygo_t_embed_cc1101
+          # boot_app0 lives inside the Arduino framework package
+          BOOT_APP0=$(find ~/.platformio/packages -path '*tools/partitions/boot_app0.bin' | head -n1)
+          echo "Using boot_app0: $BOOT_APP0"
+          mkdir -p out
+          cp "$BUILD/bootloader.bin" "$BUILD/partitions.bin" "$BUILD/firmware.bin" out/
+          cp "$BOOT_APP0" out/boot_app0.bin
+          # Single image flashable at offset 0x0 on a 16MB ESP32-S3
+          esptool.py --chip esp32s3 merge_bin \
+            -o out/CyberMeow-TEmbed-factory.bin \
+            --flash_mode dio --flash_freq 80m --flash_size 16MB \
+            0x0    out/bootloader.bin \
+            0x8000 out/partitions.bin \
+            0xe000 out/boot_app0.bin \
+            0x10000 out/firmware.bin
+          ls -la out/
+
+      - name: Upload firmware artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: CyberMeow-TEmbed-firmware
+          path: out/
+          if-no-files-found: error
