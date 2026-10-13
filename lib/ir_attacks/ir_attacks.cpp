@@ -8,11 +8,17 @@
 
 TaskHandle_t record_task_handle;
 
+// Must outlive this function: the task reads it after we return, so a
+// stack-local here is a use-after-free that crashes IR record. Only one record
+// runs at a time, so a file-scope instance is safe.
+static IrAttackTaskParams record_params;
+
 TaskHandle_t ir_record_signal(IRRecordSignalPage *page,
                               IrFramework *framework) {
-  IrAttackTaskParams params = {.ir_framework = framework, .page = page};
-  xTaskCreate(ir_record_signal_task, "ir_record_signal_task", 8000, &params, 5,
-              &record_task_handle);
+  record_params.ir_framework = framework;
+  record_params.page = page;
+  xTaskCreate(ir_record_signal_task, "ir_record_signal_task", 8000,
+              &record_params, 5, &record_task_handle);
   return record_task_handle;
 }
 
@@ -42,10 +48,13 @@ void ir_send_signal(IrFramework *framework, JsonDocument *signal_doc,
                     TaskHandle_t *list_handler) {
   RecordedSignal parsed_signal = json_to_signal(*signal_doc);
   if (signal_doc->is<JsonArray>()) {
-    IrAttackTaskParams params = {.ir_framework = framework,
-                                 .signal = signal_doc,
-                                 .progress_page = progress_page};
-    xTaskCreate(ir_list_emit, "ir_list_emit", 20000, &params, 5, list_handler);
+    // Same lifetime issue as record: keep the params alive past this call.
+    static IrAttackTaskParams emit_params;
+    emit_params.ir_framework = framework;
+    emit_params.signal = signal_doc;
+    emit_params.progress_page = progress_page;
+    xTaskCreate(ir_list_emit, "ir_list_emit", 20000, &emit_params, 5,
+                list_handler);
   } else {
     RecordedSignal parsed_signal = json_to_signal(*signal_doc);
     framework->send_protocol_signal(parsed_signal);
