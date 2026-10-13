@@ -34,6 +34,7 @@
 #include "pins.h"
 #include "posixsd.hpp"
 #include "style.h"
+#include "icons/home/splash.h"
 
 /* TODO: To lower this, we can may switch to heap for wifi_networks */
 #define TASK_STACK_SIZE 16000
@@ -52,6 +53,23 @@ Peripherals_ESP32S3_DevKitC peripherals = Peripherals_ESP32S3_DevKitC();
 Peripherals_Lilygo_t_embed_cc1101 peripherals =
     Peripherals_Lilygo_t_embed_cc1101();
 #endif
+
+// CyberMeow boot splash: magenta cat mascot + name on black.
+void show_splash() {
+#ifdef TFT_BLK
+  analogWrite(TFT_BLK, 255);  // ensure backlight is on for the splash
+#endif
+  display->fillScreen(CM_BLACK);
+  int cat_x = (display->width() - CM_CAT_W) / 2;
+  display->drawBitmap(cat_x, 16, cm_cat, CM_CAT_W, CM_CAT_H, CM_MAGENTA);
+  display->setTextSize(3);
+  display->setTextColor(CM_CYAN);
+  const char *title = "CyberMeow";
+  int tw = (int)strlen(title) * 18;  // ~18 px per char at size 3
+  display->setCursor((display->width() - tw) / 2, 116);
+  display->print(title);
+  delay(1500);
+}
 
 void setup() {
   SERIAL_DEVICE.begin(115200);
@@ -78,6 +96,7 @@ void setup() {
 
   screen->set_rotation(1);
   screen->set_background_color(HOME_BACKGROUND_COLOR);
+  show_splash();  // CyberMeow boot splash before the home screen
   main_gui = new Gui(screen);
   main_gui->init_gui();
 

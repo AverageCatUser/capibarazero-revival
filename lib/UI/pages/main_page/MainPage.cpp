@@ -40,40 +40,40 @@ void MainPage::display() {
       settings == nullptr && grid == nullptr) {
     wifi = new RectText(screen, english_words->at(WIFI_HOME_KEY),
                         HOME_TEXT_SIZE, HOME_TEXT_COLOR, HOME_ICON_HEIGHT,
-                        HOME_ICON_RADIUS, HOME_ICON_COLOR, init_wifi_ui,
+                        HOME_ICON_RADIUS, CM_WIFI, init_wifi_ui,
                         icon_wifi, HOME_ICON_W, HOME_ICON_H);
 #ifndef CONFIG_IDF_TARGET_ESP32S2
     ble = new RectText(screen, english_words->at(BLE_HOME_KEY), HOME_TEXT_SIZE,
                        HOME_TEXT_COLOR, HOME_ICON_HEIGHT, HOME_ICON_RADIUS,
-                       HOME_ICON_COLOR, init_ble_ui,
+                       CM_BLE, init_ble_ui,
                        icon_ble, HOME_ICON_W, HOME_ICON_H);
 #endif
 #if defined(CONFIG_IDF_TARGET_ESP32S2) || defined(CONFIG_IDF_TARGET_ESP32S3)
     badusb = new RectText(screen, english_words->at(BADUSB_HOME_KEY),
                           HOME_TEXT_SIZE, HOME_TEXT_COLOR, HOME_ICON_HEIGHT,
-                          HOME_ICON_RADIUS, HOME_ICON_COLOR, init_badusb_ui,
+                          HOME_ICON_RADIUS, CM_BADUSB, init_badusb_ui,
                           icon_badusb, HOME_ICON_W, HOME_ICON_H);
 #endif
     SubGhz = new RectText(screen, english_words->at(SUBGHZ_HOME_KEY),
                           HOME_TEXT_SIZE, HOME_TEXT_COLOR, HOME_ICON_HEIGHT,
-                          HOME_ICON_RADIUS, HOME_ICON_COLOR, init_subghz_ui,
+                          HOME_ICON_RADIUS, CM_SUBGHZ, init_subghz_ui,
                           icon_subghz, HOME_ICON_W, HOME_ICON_H);
     NFC = new RectText(screen, english_words->at(NFC_HOME_KEY), HOME_TEXT_SIZE,
                        HOME_TEXT_COLOR, HOME_ICON_HEIGHT, HOME_ICON_RADIUS,
-                       HOME_ICON_COLOR, init_nfc_ui,
+                       CM_NFC, init_nfc_ui,
                        icon_nfc, HOME_ICON_W, HOME_ICON_H);
     IR = new RectText(screen, english_words->at(IR_HOME_KEY), HOME_TEXT_SIZE,
                       HOME_TEXT_COLOR, HOME_ICON_HEIGHT, HOME_ICON_RADIUS,
-                      HOME_ICON_COLOR, init_ir_ui,
+                      CM_IR, init_ir_ui,
                       icon_ir, HOME_ICON_W, HOME_ICON_H);
     scripts = new RectText(screen, "JS", HOME_TEXT_SIZE,
                       HOME_TEXT_COLOR, HOME_ICON_HEIGHT, HOME_ICON_RADIUS,
-                      HOME_ICON_COLOR, init_scripts_ui,
+                      CM_JS, init_scripts_ui,
                       icon_js, HOME_ICON_W, HOME_ICON_H);
     settings =
         new RectText(screen, english_words->at(SETTINGS_HOME_KEY),
                      HOME_TEXT_SIZE, HOME_TEXT_COLOR, HOME_ICON_HEIGHT,
-                     HOME_ICON_RADIUS, HOME_ICON_COLOR, init_settings_ui,
+                     HOME_ICON_RADIUS, CM_SETTINGS, init_settings_ui,
                      icon_settings, HOME_ICON_W, HOME_ICON_H);
 
     grid = new Grid(screen, 2, 4);

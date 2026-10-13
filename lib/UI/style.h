@@ -34,6 +34,16 @@
 #define CM_MAGENTA 0xF971  // #FF2E88 - selected tile highlight
 #define CM_CYAN    0x5E9C  // #5FD3E0 - secondary / info text
 
+// Per-tile accent colours (each home tile gets its own hue for personality)
+#define CM_WIFI      0x2CDF  // azure
+#define CM_BLE       0x163A  // cyan
+#define CM_BADUSB    0x3E8A  // green
+#define CM_SUBGHZ    0xFD80  // amber
+#define CM_NFC       0x9B7E  // violet
+#define CM_IR        0xFAC7  // red-orange
+#define CM_JS        0xFE83  // yellow
+#define CM_SETTINGS  0x9D37  // slate
+
 #define HOME_BACKGROUND_COLOR CM_BLACK    // Home background color
 #define HOME_TEXT_COLOR CM_WHITE          // Icon description color
 #define HOME_ICON_COLOR CM_TEAL           // Default (unselected) tile color

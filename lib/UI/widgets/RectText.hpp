@@ -62,6 +62,11 @@ class RectText : public Widget {
   };
   void set_color(uint16_t _color) {};
   void display() {
+    // Always redraw from the idle colour. Selection recolours the outline to
+    // magenta and leaves it that way; without this reset, returning to the
+    // home screen from a feature page would keep the old magenta ring stuck
+    // on the previously-opened tile.
+    box->set_color(base_color);
     container->display();
     draw_icon();
   };
