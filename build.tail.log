@@ -1,0 +1,995 @@
+********************************************************************************
+If you like PlatformIO, please:
+- star it on GitHub > https://github.com/platformio/platformio-core
+- follow us on LinkedIn to stay up-to-date on the latest project news > https://www.linkedin.com/company/platformio/
+- try PlatformIO IDE for embedded development > https://platformio.org/platformio-ide
+********************************************************************************
+
+Processing lilygo_t_embed_cc1101 (platform: espressif32@6.9.0; framework: arduino; board: lilygo-t-display-s3)
+--------------------------------------------------------------------------------
+Platform Manager: Installing espressif32 @ 6.9.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Platform Manager: espressif32@6.9.0 has been installed!
+Tool Manager: Installing espressif/toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: toolchain-xtensa-esp32s3@8.4.0+2021r2-patch5 has been installed!
+Tool Manager: Installing espressif/toolchain-riscv32-esp @ 8.4.0+2021r2-patch5
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: toolchain-riscv32-esp@8.4.0+2021r2-patch5 has been installed!
+Tool Manager: Installing platformio/framework-arduinoespressif32 @ ~3.20017.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: framework-arduinoespressif32@3.20017.241212+sha.dcc1105b has been installed!
+Tool Manager: Installing platformio/tool-esptoolpy @ ~1.40501.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: tool-esptoolpy@1.40501.0 has been installed!
+Tool Manager: Installing platformio/tool-openocd-esp32 @ ~2.1100.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: tool-openocd-esp32@2.1100.20220706 has been installed!
+Tool Manager: Installing platformio/tool-scons @ ~4.41101.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: tool-scons@4.41101.0 has been installed!
+Library Manager: Installing git+https://github.com/Arduino-IRremote/Arduino-IRremote.git#v4.4.3
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-lefcmpd1'...
+Note: switching to '6d11b6a82745622e6192fcafba27aa8fcb196cf4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Library Manager: IRremote@4.4.3+sha.6d11b6a has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/WifiSniffer.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-04wr4huy'...
+Library Manager: WifiSniffer@1.2.0+sha.4c0009b has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing ArduinoPcap @ *
+Library Manager: Installing paulstoffregen/Time @ ^1.6.1
+Downloading 0% 10% 20% 30%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Time@1.6.1 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/AppleJuice.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-sfa0stvd'...
+Library Manager: AppleJuice@1.0.0+sha.92e8bab has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing h2zero/NimBLE-Arduino @ ^1.4.1
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: NimBLE-Arduino@1.4.3 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/SamsungBleSpam.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-5jtum75m'...
+Library Manager: SamsungBleSpam@1.1.0+sha.8876c46 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/MicrosoftBleSpam.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-k1kfbf21'...
+Library Manager: DHCPGlutton@1.1.0+sha.c1b0766 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/FastPairSpam.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-xag07q1i'...
+Library Manager: SamsungBleSpam@1.1.0+sha.842d742 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/USB.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-pbijg4wd'...
+Library Manager: USB@2.0.0+sha.a357687 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/HID.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-lk7o4_3a'...
+Library Manager: HID@1.2.0+sha.cc95d20 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/DuckyESP.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-ujcmemi1'...
+Library Manager: DuckyESP@1.1.0+sha.616a78a has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/SDBridge32.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-v6qy9mtu'...
+Library Manager: SDBridge32@1.0.0+sha.3ca7fa9 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/NFCFramework.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-59y3m2it'...
+Library Manager: NFCFramework@2.0.1+sha.2cd53bd has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/Adafruit-PN532.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-9835idpe'...
+Library Manager: Adafruit_PN532@1.4.0+sha.6dcdf72 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing Adafruit BusIO
+Downloading 0% 10% 20% 30%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit BusIO@1.17.4 has been installed!
+Library Manager: Installing git+https://github.com/huckor/BER-TLV.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-pp8pu1jo'...
+Library Manager: BER-TLV@0.0.0+20261013221145.sha.bd61b70 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/PosixSD.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-3s_xdnsl'...
+Library Manager: PosixSD@1.1.0+sha.6995df7 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/EvilPortal.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-p15malgh'...
+Library Manager: EvilPortal@1.12.0+sha.1a406cb has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing esphome/ESPAsyncWebServer-esphome @ ^3.1.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: ESPAsyncWebServer-esphome@3.4.0 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing esphome/AsyncTCP-esphome
+Downloading 0% 10% 20% 30%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: AsyncTCP-esphome@2.1.4 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/DHCPGlutton.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-lsrbixmp'...
+Library Manager: DHCPGlutton@1.1.0+sha.ca4680e has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/BLESniffer.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-_6lwlaf9'...
+Library Manager: BLESniffer@1.2.0+sha.1bea2e8 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/spacehuhn/ArduinoPcap.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-hj55t7tm'...
+Library Manager: ArduinoPcap@1.0.0+sha.d96bb01 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing SdFat
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: SdFat@2.3.1 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/BLEScanner.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-1pg9osf2'...
+Library Manager: BLEScanner@1.1.0+sha.6a9c621 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing bblanchon/ArduinoJson @ ^7.2.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: ArduinoJson@7.4.3 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/ESPShark.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-qlgo62q4'...
+Library Manager: ESPShark@1.0.0+sha.bb0dd50 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/CapibaraZero/ARP_Poisoner.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-yrbfk8mn'...
+Library Manager: ARP_Poisoner@0.0.0+20261013221158.sha.457a570 has been installed!
+Library Manager: Installing git+https://github.com/CapibaraZero/IrFramework.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-9d_f2i_9'...
+Library Manager: IrFramework@1.0.0+sha.94fc35d has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing z3t0/IRremote @ ^4.4.1
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: IRremote@4.7.1 has been installed!
+Library Manager: Installing git+https://github.com/andreock/GFXForms.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-cy_ve7ve'...
+Library Manager: GFXForms@1.1.0+sha.6c34671 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing adafruit/Adafruit ST7735 and ST7789 Library @ ^1.10.3
+Downloading 0% 10% 20% 30% 40% 50%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit ST7735 and ST7789 Library@1.11.0 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing Adafruit GFX Library
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit GFX Library@1.12.6 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing Adafruit seesaw Library
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: Adafruit seesaw Library@1.7.9 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing git+https://github.com/vdccc/EasyButton.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-12rbze5v'...
+Library Manager: EasyButton@2.0.3+sha.1e52d9a has been installed!
+Library Manager: Installing git+https://github.com/andreock/RadioLib.git
+git version 2.55.0
+Cloning into '/home/runner/.platformio/.cache/tmp/pkg-installing-9nqe253z'...
+Library Manager: RadioLib@6.6.0+sha.9e06c4f has been installed!
+Library Manager: Installing mathertel/RotaryEncoder @ ^1.5.3
+Downloading 0% 10% 20%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: RotaryEncoder@1.6.0 has been installed!
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/lilygo-t-display-s3.html
+PLATFORM: Espressif 32 (6.9.0) > LilyGo T-Display-S3
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 16MB Flash
+DEBUG: Current (esp-builtin) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 1.40501.0 (4.5.1) 
+ - tool-openocd-esp32 @ 2.1100.20220706 (11.0) 
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5 
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+rm -f *.cpp *.hpp *.o duckuino
+bison -o parser.cpp -d parser.y
+flex -o lexer.cpp lexer.l
+Found 87 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- SPI @ 2.0.0
+|-- Wire @ 2.0.0
+|-- WiFi @ 2.0.0
+|-- FS @ 2.0.0
+|-- IRremote @ 4.4.3+sha.6d11b6a
+|-- WifiSniffer @ 1.2.0+sha.4c0009b
+|-- AppleJuice @ 1.0.0+sha.92e8bab
+|-- SamsungBleSpam @ 1.1.0+sha.8876c46
+|-- DHCPGlutton @ 1.1.0+sha.c1b0766
+|-- SamsungBleSpam @ 1.1.0+sha.842d742
+|-- USB @ 2.0.0+sha.a357687
+|-- HID @ 1.2.0+sha.cc95d20
+|-- DuckyESP @ 1.1.0+sha.616a78a
+|-- NFCFramework @ 2.0.1+sha.2cd53bd
+|-- PosixSD @ 1.1.0+sha.6995df7
+|-- EvilPortal @ 1.12.0+sha.1a406cb
+|-- DHCPGlutton @ 1.1.0+sha.ca4680e
+|-- BLESniffer @ 1.2.0+sha.1bea2e8
+|-- BLEScanner @ 1.1.0+sha.6a9c621
+|-- ESPShark @ 1.0.0+sha.bb0dd50
+|-- ARP_Poisoner @ 0.0.0+20261013221158.sha.457a570
+|-- IrFramework @ 1.0.0+sha.94fc35d
+|-- GFXForms @ 1.1.0+sha.6c34671
+|-- ArduinoPcap @ 1.0.0+sha.d96bb01
+|-- ArduinoJson @ 7.4.3
+|-- AsyncTCP-esphome @ 2.1.4
+|-- EasyButton @ 2.0.3+sha.1e52d9a
+|-- RadioLib @ 6.6.0+sha.9e06c4f
+|-- BER-TLV @ 0.0.0+20261013221145.sha.bd61b70
+|-- RotaryEncoder @ 1.6.0
+|-- power_management
+|-- Peripherals
+|-- UI
+|-- Adafruit GFX Library @ 1.12.6
+|-- Adafruit ST7735 and ST7789 Library @ 1.11.0
+Building in debug mode
+Compiling .pio/build/lilygo_t_embed_cc1101/src/main.cpp.o
+Building .pio/build/lilygo_t_embed_cc1101/bootloader.bin
+Generating partitions .pio/build/lilygo_t_embed_cc1101/partitions.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 1 ELF section
+Successfully created esp32s3 image.
+Compiling .pio/build/lilygo_t_embed_cc1101/lib30b/SPI/SPI.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/liba33/Wire/Wire.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFi.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib30b/libSPI.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib30b/libSPI.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFiAP.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFiClient.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/liba33/libWire.a
+Indexing .pio/build/lilygo_t_embed_cc1101/liba33/libWire.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFiGeneric.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFiMulti.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFiSTA.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFiScan.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFiServer.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib989/WiFi/WiFiUdp.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7aa/FS/FS.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7aa/FS/vfs_api.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/ExFatLib/ExFatDbg.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib989/libWiFi.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib989/libWiFi.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/ExFatLib/ExFatFile.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/ExFatLib/ExFatFilePrint.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib7aa/libFS.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib7aa/libFS.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/ExFatLib/ExFatFileWrite.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/ExFatLib/ExFatFormatter.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/ExFatLib/ExFatName.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/ExFatLib/ExFatPartition.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/ExFatLib/ExFatVolume.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatDbg.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatFile.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatFileLFN.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatFilePrint.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatFileSFN.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatFormatter.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatName.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatPartition.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FatLib/FatVolume.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FreeStack.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FsLib/FsFile.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FsLib/FsNew.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/FsLib/FsVolume.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/MinimumSerial.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/SdCard/PioSdio/PioSdioCard.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/SdCard/SdCardInfo.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/SdCard/SdSpiCard/SdSpiCard.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/SdCard/SdSpiCard/SpiDriver/SdSpiChipSelect.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/SdCard/SdSpiCard/SpiDriver/SdSpiDue.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/SdCard/SdSpiCard/SpiDriver/SdSpiSTM32Core.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/SdCard/SdSpiCard/SpiDriver/SdSpiTeensy3.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/SdCard/TeensySdio/TeensySdio.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/common/FmtNumber.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/common/FsCache.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/common/FsDateTime.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/common/FsName.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/common/FsStructs.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/common/FsUtf.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/common/PrintBasic.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/common/upcase.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/iostream/StdioStream.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/iostream/StreamBaseClass.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/iostream/istream.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libbbf/SdFat/iostream/ostream.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib770/SD/SD.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib770/SD/sd_diskio.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib770/SD/sd_diskio_crc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib67c/ArduinoPcap/PCAP.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libbbf/libSdFat.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libbbf/libSdFat.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libb5c/Time/DateStrings.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libb5c/Time/Time.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib770/libSD.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib770/libSD.a
+Compiling .pio/build/lilygo_t_embed_cc1101/liba10/WifiSniffer/wifi_sniffer.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib67c/libArduinoPcap.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib67c/libArduinoPcap.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLE2904.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libb5c/libTime.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libb5c/libTime.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEAddress.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEAdvertisedDevice.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/liba10/libWifiSniffer.a
+Indexing .pio/build/lilygo_t_embed_cc1101/liba10/libWifiSniffer.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEAdvertising.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEBeacon.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLECharacteristic.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEClient.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEDescriptor.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEDevice.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEEddystoneTLM.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEEddystoneURL.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEExtAdvertising.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEHIDDevice.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLERemoteCharacteristic.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLERemoteDescriptor.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLERemoteService.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEScan.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLESecurity.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEServer.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEService.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEUUID.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/NimBLEUtils.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/esp_port/esp-hci/src/esp_nimble_hci.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/esp_port/port/src/esp_nimble_mem.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_decrypt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/aes_encrypt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/cbc_mode.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/ccm_mode.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/cmac_mode.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_mode.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/ctr_prng.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dh.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_dsa.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/ecc_platform_specific.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/hmac_prng.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/sha256.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/ext/tinycrypt/src/utils.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_adv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_conn_hci.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_ctrl.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_dtm.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_hci_ev.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_iso.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rand.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_resolv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_rfmgmt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_scan.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sched.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_supp_cmd.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_sync.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_trace.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_utils.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/controller/src/ble_ll_whitelist.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_hw.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/drivers/nrf51/src/ble_phy.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_hw.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/drivers/nrf52/src/ble_phy_trace.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/access.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/adv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/aes-ccm.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/app_keys.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/beacon.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/cdb.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_cli.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/cfg_srv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/crypto.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/friend.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/glue.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_cli.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/health_srv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/heartbeat.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/light_model.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/lpn.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/mesh.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_cli.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/model_srv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/net.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/nodes.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_adv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/pb_gatt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/prov_device.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/provisioner.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/proxy.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/rpl.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/settings.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/shell.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/subnet.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/mesh/src/transport.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/services/ans/src/ble_svc_ans.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/services/bas/src/ble_svc_bas.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/services/dis/src/ble_svc_dis.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/services/gap/src/ble_svc_gap.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/services/gatt/src/ble_svc_gatt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/services/ias/src/ble_svc_ias.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/services/ipss/src/ble_svc_ipss.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/services/lls/src/ble_svc_lls.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_att.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_att_clt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_att_cmd.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_att_svr.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_eddystone.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_gap.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_gattc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_gatts_lcl.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_adv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_atomic.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_cfg.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_conn.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_flow.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_cmd.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_evt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_hci_util.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_id.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_log.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mbuf.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_misc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_mqueue.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_periodic_sync.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_pvcy.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_resolv.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_shutdown.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_startup.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_hs_stop.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_ibeacon.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_coc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_l2cap_sig_cmd.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_monitor.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_sm.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_alg.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_cmd.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_lgcy.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_sm_sc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_store.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_store_util.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/src/ble_uuid.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_config_conf.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/store/config/src/ble_store_nvs.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/host/util/src/addr.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/nimble/transport/ram/src/ble_hci_ram.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/endian.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/hal_timer.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/hal_uart.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/mem.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/nimble_port.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/os_cputime_pwr2.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/os_mbuf.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/os_mempool.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/nimble/src/os_msys_init.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/npl/freertos/src/nimble_port_freertos.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib82c/NimBLE-Arduino/nimble/porting/npl/freertos/src/npl_os_freertos.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib548/AppleJuice/AppleJuice.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib82c/libNimBLE-Arduino.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib82c/libNimBLE-Arduino.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7f1/SamsungBleSpam@src-82fc97a778ed819bf54b8edf2e06590d/samsung_ble_spam.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libcab/DHCPGlutton@src-9f87a24437b6061188ce5fdc360c80e5/microsoft_ble_spam.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7db/SamsungBleSpam/fast_pair_spam.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib548/libAppleJuice.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib548/libAppleJuice.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/USBHID.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib7f1/libSamsungBleSpam@src-82fc97a778ed819bf54b8edf2e06590d.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib7f1/libSamsungBleSpam@src-82fc97a778ed819bf54b8edf2e06590d.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/USBHIDConsumerControl.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libcab/libDHCPGlutton@src-9f87a24437b6061188ce5fdc360c80e5.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libcab/libDHCPGlutton@src-9f87a24437b6061188ce5fdc360c80e5.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/USBHIDGamepad.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/USBHIDKeyboard.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/USBHIDMouse.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib7db/libSamsungBleSpam.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib7db/libSamsungBleSpam.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/USBHIDSystemControl.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/USBHIDVendor.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/USBVendor.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_da_DK.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_de_DE.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_en_US.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_es_ES.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_fr_FR.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_hu_HU.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_it_IT.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_pt_BR.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_pt_PT.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib922/USB/keyboardLayout/KeyboardLayout_sv_SE.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLE2902.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLE2904.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEAddress.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib922/libUSB.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib922/libUSB.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEAdvertisedDevice.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEAdvertising.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEBeacon.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLECharacteristic.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLECharacteristicMap.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEClient.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEDescriptor.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEDescriptorMap.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEDevice.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEEddystoneTLM.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEEddystoneURL.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEExceptions.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEHIDDevice.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLERemoteCharacteristic.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLERemoteDescriptor.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLERemoteService.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEScan.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLESecurity.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEServer.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEService.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEServiceMap.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEUUID.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEUtils.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/BLEValue.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/FreeRTOS.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf74/BLE/GeneralUtils.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libd61/HID/ble_hid/BLEHid.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libd61/HID/ble_hid/BLEKeyboard.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libd61/HID/ble_hid/BLEMouse.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libf74/libBLE.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libf74/libBLE.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libd61/HID/ble_hid/KeyboardCallback.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libd61/HID/usb_hid/USBHid.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libea3/SDBridge32/SDBridge32.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib51c/DuckyESP/lexer.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib51c/DuckyESP/parser.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libd61/libHID.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libd61/libHID.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib6ba/Adafruit BusIO/Adafruit_BusIO_Register.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libea3/libSDBridge32.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libea3/libSDBridge32.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib6ba/Adafruit BusIO/Adafruit_GenericDevice.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib6ba/Adafruit BusIO/Adafruit_I2CDevice.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib6ba/Adafruit BusIO/Adafruit_SPIDevice.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib6de/Adafruit_PN532/Adafruit_PN532.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2f0/BER-TLV/BerTlv.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib6ba/libAdafruit BusIO.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib6ba/libAdafruit BusIO.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2f0/BER-TLV/tests.cpp.o
+parser.y: In function 'int yyparse()':
+parser.y:369:33: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+parser.cpp:1986:35: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+parser.cpp:2097:35: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+Archiving .pio/build/lilygo_t_embed_cc1101/lib6de/libAdafruit_PN532.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib6de/libAdafruit_PN532.a
+Compiling .pio/build/lilygo_t_embed_cc1101/liba29/NFCFramework/NFCTag.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib51c/libDuckyESP.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib51c/libDuckyESP.a
+Compiling .pio/build/lilygo_t_embed_cc1101/liba29/NFCFramework/nfc_framework.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib338/PosixSD/posixsd.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib2f0/libBER-TLV.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib2f0/libBER-TLV.a
+In file included from .pio/libdeps/lilygo_t_embed_cc1101/NFCFramework/nfc_framework.cpp:18:
+.pio/libdeps/lilygo_t_embed_cc1101/NFCFramework/nfc_framework.cpp: In member function 'uint8_t* NFCFramework::dump_tag(Key*, uint8_t, DumpResult*)':
+.pio/libdeps/lilygo_t_embed_cc1101/NFCFramework/nfc_framework.hpp:30:32: warning: unsigned conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '512' to '0' [-Woverflow]
+ #define MIFARE_ULTRALIGHT_SIZE 512
+                                ^~~
+.pio/libdeps/lilygo_t_embed_cc1101/NFCFramework/nfc_framework.cpp:219:22: note: in expansion of macro 'MIFARE_ULTRALIGHT_SIZE'
+             blocks = MIFARE_ULTRALIGHT_SIZE;
+                      ^~~~~~~~~~~~~~~~~~~~~~
+Compiling .pio/build/lilygo_t_embed_cc1101/libc0f/AsyncTCP-esphome/AsyncTCP.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib408/ESPAsyncWebServer-esphome/AsyncEventSource.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib338/libPosixSD.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib338/libPosixSD.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib408/ESPAsyncWebServer-esphome/AsyncWebSocket.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/liba29/libNFCFramework.a
+Indexing .pio/build/lilygo_t_embed_cc1101/liba29/libNFCFramework.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib408/ESPAsyncWebServer-esphome/WebAuthentication.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libc0f/libAsyncTCP-esphome.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libc0f/libAsyncTCP-esphome.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib408/ESPAsyncWebServer-esphome/WebHandlers.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib408/ESPAsyncWebServer-esphome/WebRequest.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib408/ESPAsyncWebServer-esphome/WebResponses.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib408/ESPAsyncWebServer-esphome/WebServer.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib4b6/ESPmDNS/ESPmDNS.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib147/DNSServer/DNSServer.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib4b6/libESPmDNS.a
+Archiving .pio/build/lilygo_t_embed_cc1101/lib408/libESPAsyncWebServer-esphome.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib4b6/libESPmDNS.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib408/libESPAsyncWebServer-esphome.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libcd0/EvilPortal/evilportal.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libcd0/EvilPortal/handler.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib3db/DHCPGlutton/DHCPGlutton.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib147/libDNSServer.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib147/libDNSServer.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib3e8/BLESniffer/AdvertiseCallback.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib3e8/BLESniffer/BLESniffer.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib3db/libDHCPGlutton.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib3db/libDHCPGlutton.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libb01/BLEScanner/AdvertisedScannedDeviceCallback.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libcd0/libEvilPortal.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libcd0/libEvilPortal.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libb01/BLEScanner/BLEScanner.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib3b2/ESPShark/ESPShark.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib3e8/libBLESniffer.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib3e8/libBLESniffer.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libf04/ARP_Poisoner/arp_poisoner.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib3b2/libESPShark.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib3b2/libESPShark.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libd17/IrFramework/IrFramework.cpp.o
+In file included from .pio/libdeps/lilygo_t_embed_cc1101/IrFramework/IrFramework.cpp:2:
+.pio/libdeps/lilygo_t_embed_cc1101/IRremote@src-4c7963cbdf1605148141926079836e93/src/IRremote.hpp:202:2: warning: #warning INFO: For ESP32, RP2040, mbed and particle boards SEND_PWM_BY_TIMER is enabled by default, since we have the resources and timing is more exact than the software generated one. If this is not intended, deactivate the line in IRremote.hpp over this warning message in file IRremote.hpp. [-Wcpp]
+ #warning INFO: For ESP32, RP2040, mbed and particle boards SEND_PWM_BY_TIMER is enabled by default, since we have the resources and timing is more exact than the software generated one. If this is not intended, deactivate the line in IRremote.hpp over this warning message in file IRremote.hpp.
+  ^~~~~~~
+Archiving .pio/build/lilygo_t_embed_cc1101/libf04/libARP_Poisoner.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libf04/libARP_Poisoner.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib727/Adafruit GFX Library/Adafruit_GFX.cpp.o
+In file included from .pio/libdeps/lilygo_t_embed_cc1101/IrFramework/IrFramework.cpp:2:
+.pio/libdeps/lilygo_t_embed_cc1101/IRremote@src-4c7963cbdf1605148141926079836e93/src/IRremote.hpp:290:2: warning: #warning INFO: No definition for LED_BUILTIN found -> default LED feedback is disabled. [-Wcpp]
+ #warning INFO: No definition for LED_BUILTIN found -> default LED feedback is disabled.
+  ^~~~~~~
+Compiling .pio/build/lilygo_t_embed_cc1101/lib727/Adafruit GFX Library/Adafruit_GrayOLED.cpp.o
+In file included from .pio/libdeps/lilygo_t_embed_cc1101/IRremote@src-4c7963cbdf1605148141926079836e93/src/IRremote.hpp:304,
+                 from .pio/libdeps/lilygo_t_embed_cc1101/IrFramework/IrFramework.cpp:2:
+.pio/libdeps/lilygo_t_embed_cc1101/IRremote@src-4c7963cbdf1605148141926079836e93/src/IRReceive.hpp:122:32: warning: unknown option after '#pragma GCC diagnostic' kind [-Wpragmas]
+ #pragma GCC diagnostic ignored "-Wvolatile"
+                                ^~~~~~~~~~~~
+.pio/libdeps/lilygo_t_embed_cc1101/IrFramework/IrFramework.cpp: In member function 'void IrFramework::send_protocol_signal(RecordedSignal)':
+.pio/libdeps/lilygo_t_embed_cc1101/IrFramework/IrFramework.cpp:46:75: warning: 'void IRsend::sendJVC(long unsigned int, int, bool)' is deprecated: This old function sends MSB first! Please use sendJVC(aAddress, aCommand, aNumberOfRepeats). [-Wdeprecated-declarations]
+         IrSender.sendJVC(record.decodedRawData, record.numberOfBits, false);
+                                                                           ^
+In file included from .pio/libdeps/lilygo_t_embed_cc1101/IRremote@src-4c7963cbdf1605148141926079836e93/src/IRremote.hpp:273,
+                 from .pio/libdeps/lilygo_t_embed_cc1101/IrFramework/IrFramework.cpp:2:
+.pio/libdeps/lilygo_t_embed_cc1101/IRremote@src-4c7963cbdf1605148141926079836e93/src/IRremoteInt.h:646:10: note: declared here
+     void sendJVC(unsigned long data, int nbits,
+          ^~~~~~~
+Compiling .pio/build/lilygo_t_embed_cc1101/lib727/Adafruit GFX Library/Adafruit_SPITFT.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib727/Adafruit GFX Library/glcdfont.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf1e/Adafruit ST7735 and ST7789 Library/Adafruit_ST7735.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libd17/libIrFramework.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libd17/libIrFramework.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libf1e/Adafruit ST7735 and ST7789 Library/Adafruit_ST7789.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libb01/libBLEScanner.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libb01/libBLEScanner.a
+Archiving .pio/build/lilygo_t_embed_cc1101/lib727/libAdafruit GFX Library.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib727/libAdafruit GFX Library.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libf1e/Adafruit ST7735 and ST7789 Library/Adafruit_ST7796S.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libf1e/Adafruit ST7735 and ST7789 Library/Adafruit_ST77xx.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdf0/GFXForms/Bitmap.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdf0/GFXForms/GFXForms.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdf0/GFXForms/Grid.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libf1e/libAdafruit ST7735 and ST7789 Library.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libf1e/libAdafruit ST7735 and ST7789 Library.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libdf0/GFXForms/List.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdf0/GFXForms/Rect.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdf0/GFXForms/Text.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib0b3/EasyButton/EasyButton.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib0b3/EasyButton/EasyButtonBase.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib0b3/EasyButton/EasyButtonVirtual.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libdf0/libGFXForms.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libdf0/libGFXForms.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib0b3/EasyButton/Sequence.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/ArduinoHal.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/Hal.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/Module.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib0b3/libEasyButton.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib0b3/libEasyButton.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/CC1101/CC1101.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/LLCC68/LLCC68.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/LR11x0/LR1110.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/LR11x0/LR1120.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/LR11x0/LR1121.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/LR11x0/LR11x0.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/RF69/RF69.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX123x/SX1231.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX123x/SX1233.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX126x/STM32WLx.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX126x/STM32WLx_Module.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX126x/SX1261.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX126x/SX1262.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX126x/SX1268.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX126x/SX126x.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX127x/SX1272.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX127x/SX1273.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX127x/SX1276.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX127x/SX1277.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX127x/SX1278.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX127x/SX1279.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX127x/SX127x.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX128x/SX1280.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX128x/SX1281.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX128x/SX1282.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/SX128x/SX128x.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/Si443x/Si4430.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/Si443x/Si4431.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/Si443x/Si4432.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/Si443x/Si443x.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/modules/nRF24/nRF24.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/AFSK/AFSK.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/APRS/APRS.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/AX25/AX25.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/BellModem/BellModem.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/ExternalRadio/ExternalRadio.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/FSK4/FSK4.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/Hellschreiber/Hellschreiber.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/LoRaWAN/LoRaWAN.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/LoRaWAN/LoRaWANBands.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/Morse/Morse.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/Pager/Pager.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/PhysicalLayer/PhysicalLayer.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/Print/ITA2String.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/Print/Print.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/RTTY/RTTY.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/protocols/SSTV/SSTV.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/utils/CRC.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/utils/Cryptography.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib912/RadioLib/utils/FEC.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libd90/RotaryEncoder/RotaryEncoder.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib83e/power_management/DeepSleep.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib83e/power_management/battery_monitor.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib912/libRadioLib.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib912/libRadioLib.a
+In file included from lib/power_management/battery_monitor.cpp:20:
+lib/power_management/../../include/battery_level.h:22:27: warning: backslash-newline at end of file
+ #define TASK_POLLING_RATE \
+                            
+Compiling .pio/build/lilygo_t_embed_cc1101/lib850/helper/fm.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libd90/libRotaryEncoder.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libd90/libRotaryEncoder.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib850/helper/helper.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib83e/libpower_management.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib83e/libpower_management.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib850/helper/hex2str.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7de/wifi_attack/wifi_attack.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7de/wifi_attack/wifi_attacks_btn.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7de/wifi_attack/wifi_tasks.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib850/libhelper.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib850/libhelper.a
+In file included from lib/wifi_attack/wifi_attack.cpp:22:
+lib/wifi_attack/../../include/pcap_gen.h:2:25: warning: backslash-newline at end of file
+ #define PCAP_FILE(type) \
+                          
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7fc/bluetooth_attacks/ble_attack_tasks.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7fc/bluetooth_attacks/ble_attacks_btn.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib7fc/bluetooth_attacks/bluetooth_attacks.cpp.o
+In file included from lib/bluetooth_attacks/bluetooth_attacks.cpp:20:
+lib/bluetooth_attacks/../../include/pcap_gen.h:2:25: warning: backslash-newline at end of file
+ #define PCAP_FILE(type) \
+                          
+Compiling .pio/build/lilygo_t_embed_cc1101/libc10/sdcard_helper/sdcard_helper.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib0ff/ir_attacks/ir_attacks.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib7fc/libbluetooth_attacks.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib7fc/libbluetooth_attacks.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib0ff/ir_attacks/ir_attacks_task.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libc10/libsdcard_helper.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libc10/libsdcard_helper.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib445/nfc_attacks/flipper_zero_nfc_file_parser.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib7de/libwifi_attack.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib7de/libwifi_attack.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib445/nfc_attacks/nfc_attacks.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib445/nfc_attacks/nfc_attacks_btn.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib445/nfc_attacks/nfc_tasks.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libfab/SubGHZ/SubGHZ.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib0ff/libir_attacks.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib0ff/libir_attacks.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib1af/network_attacks/network_attacks.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libfab/libSubGHZ.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libfab/libSubGHZ.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib1af/network_attacks/network_attacks_btn.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib1af/network_attacks/network_attacks_tasks.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib3a1/subghz_attacks/config_parser.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib445/libnfc_attacks.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib445/libnfc_attacks.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib3a1/subghz_attacks/subghz_attacks.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib3a1/subghz_attacks/subghz_tasks.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib1af/libnetwork_attacks.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib1af/libnetwork_attacks.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib620/LittleFS/LittleFS.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib402/duktape-2.7.0/duktape.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/AppsJS.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/badusb.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib620/libLittleFS.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib620/libLittleFS.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/ble.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/io.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/ir.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib3a1/libsubghz_attacks.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib3a1/libsubghz_attacks.a
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/js_gui.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/nfc.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/storage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/timer.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib2a2/AppsJS/wifi.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libc0c/captive_portal_callback/captive_portal_callback.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib2a2/libAppsJS.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib2a2/libAppsJS.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/gui.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/i18n.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/BLE/ble_navigation.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/BadUSB/BadUSBNavigation.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libc0c/libcaptive_portal_callback.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libc0c/libcaptive_portal_callback.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/IR/IRNavigation.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/NFC/NFCNavigation.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/Settings/SettingsNavigation.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib402/libduktape-2.7.0.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib402/libduktape-2.7.0.a
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/SubGHZ/SubGHZNavigation.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/buttons/btn_routines.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/navigation.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/scripts/ScriptsNavigation.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/navigation/wifi/wifi_navigation.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/BLE/BLEPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/BLE/BLEScanPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/BLE/BLESniffPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/BLE/BLESpamPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/FileBrowser/FileBrowserPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/IR/IREmulateRC.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/IR/IRListsProgress.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/IR/IRMainPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/IR/IRRecordSignalPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/FeliCaPages/NFCFelicaPollingResultPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCBruteforceTagPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCDumpResultPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCEMVReadPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCEmulateTagPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCFormatResultPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCMainPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCPollingResultPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCPollingWaitingPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/NFC/NFCWriteResultPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/Settings/SettingsPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/SubGHZ/SubGHZFrequencyAnalyzerPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/SubGHZ/SubGHZPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/SubGHZ/SubGHZRAWRecordPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/SubGHZ/SubGHZSender.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/main_page/MainPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/network_attacks/ARPoisonerPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/network_attacks/DHCPGluttonPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/network_attacks/EvilPortalPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/wifi/WifiNetworksPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/wifi/WifiPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/wifi/WifiScanPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/wifi/WifiScanSaveResultPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/pages/wifi/WifiSniffPage.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/ui_tasks/BLE/ble_ui_tasks.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/ui_tasks/battery_monitor/battery_monitor_task.cpp.o
+In file included from lib/UI/ui_tasks/battery_monitor/battery_monitor_task.cpp:20:
+lib/UI/ui_tasks/battery_monitor/../../../../include/battery_level.h:22:27: warning: backslash-newline at end of file
+ #define TASK_POLLING_RATE \
+                            
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/ui_tasks/network_attacks/net_attacks_ui_tasks.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/ui_tasks/wifi/wifi_ui_tasks.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/libdd6/UI/widgets/RectText.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/lib004/Peripherals/Peripherals.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/Esp.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libdd6/libUI.a
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/FirmwareMSC.cpp.o
+Indexing .pio/build/lilygo_t_embed_cc1101/libdd6/libUI.a
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/FunctionalInterrupt.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/HWCDC.cpp.o
+Archiving .pio/build/lilygo_t_embed_cc1101/lib004/libPeripherals.a
+Indexing .pio/build/lilygo_t_embed_cc1101/lib004/libPeripherals.a
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/HardwareSerial.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/IPAddress.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/IPv6Address.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/MD5Builder.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/Print.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/StreamString.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/Tone.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/USB.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/USBCDC.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/USBMSC.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/WMath.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/WString.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/base64.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/cbuf.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-adc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-bt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-cpu.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-dac.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-gpio.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-i2c-slave.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-i2c.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-ledc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-matrix.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-misc.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-psram.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-rgb-led.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-rmt.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-sigmadelta.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-spi.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-time.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-timer.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-tinyusb.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-touch.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/esp32-hal-uart.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/firmware_msc_fat.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/libb64/cdecode.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/libb64/cencode.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/main.cpp.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/stdlib_noniso.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/wiring_pulse.c.o
+Compiling .pio/build/lilygo_t_embed_cc1101/FrameworkArduino/wiring_shift.c.o
+Archiving .pio/build/lilygo_t_embed_cc1101/libFrameworkArduino.a
+Indexing .pio/build/lilygo_t_embed_cc1101/libFrameworkArduino.a
+Linking .pio/build/lilygo_t_embed_cc1101/firmware.elf
+Retrieving maximum program size .pio/build/lilygo_t_embed_cc1101/firmware.elf
+Checking size .pio/build/lilygo_t_embed_cc1101/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  23.1% (used 75744 bytes from 327680 bytes)
+Flash: [===       ]  30.3% (used 1986685 bytes from 6553600 bytes)
+Building .pio/build/lilygo_t_embed_cc1101/firmware.bin with action:
+  "$PYTHONEXE" "$OBJCOPY" --chip esp32s3 elf2image --flash_mode ${__get_board_flash_mode(__env__)} --flash_freq ${__get_board_f_image(__env__)} --flash_size 16MB --elf-sha256-offset 0xb0 -o $TARGET $SOURCES
+Building .pio/build/lilygo_t_embed_cc1101/firmware.bin
+esptool.py v4.5.1
+Creating esp32s3 image...
+Merged 3 ELF sections
+Successfully created esp32s3 image.
+======================== [SUCCESS] Took 203.72 seconds ========================
+
+Environment            Status    Duration
+---------------------  --------  ------------
+lilygo_t_embed_cc1101  SUCCESS   00:03:23.721
+========================= 1 succeeded in 00:03:23.721 =========================
