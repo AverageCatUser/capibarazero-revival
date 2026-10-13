@@ -1,16 +1,17 @@
 name: Build CyberMeow firmware (T-Embed CC1101)
 
 # Builds the restyled firmware for the LilyGO T-Embed CC1101 and produces a
-# single flashable .bin. Runs on every push and can also be started by hand
-# from the Actions tab (Run workflow). The compiled firmware shows up under
-# the run's "Artifacts" section as "CyberMeow-TEmbed-firmware".
+# single flashable .bin. Outputs (the merged .bin on success, plus the build
+# log) are published to the `ci-artifacts` branch so they can be retrieved via
+# git, and also uploaded as a normal workflow artifact.
 
 on:
   push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -22,14 +23,6 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Cache PlatformIO
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.cache/pip
-            ~/.platformio/.cache
-          key: ${{ runner.os }}-pio-tembed
-
       - name: Install PlatformIO + esptool
         run: pip install --upgrade platformio esptool
 
@@ -37,31 +30,55 @@ jobs:
         run: bash init_libs.sh
 
       - name: Build T-Embed CC1101 firmware
-        run: pio run -e lilygo_t_embed_cc1101
+        id: build
+        run: |
+          set -o pipefail
+          mkdir -p ci-out
+          if pio run -e lilygo_t_embed_cc1101 2>&1 | tee ci-out/build.log; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Merge into a single flashable .bin
+        if: steps.build.outputs.ok == 'true'
         run: |
           set -e
           BUILD=.pio/build/lilygo_t_embed_cc1101
-          # boot_app0 lives inside the Arduino framework package
           BOOT_APP0=$(find ~/.platformio/packages -path '*tools/partitions/boot_app0.bin' | head -n1)
-          echo "Using boot_app0: $BOOT_APP0"
-          mkdir -p out
-          cp "$BUILD/bootloader.bin" "$BUILD/partitions.bin" "$BUILD/firmware.bin" out/
-          cp "$BOOT_APP0" out/boot_app0.bin
-          # Single image flashable at offset 0x0 on a 16MB ESP32-S3
+          cp "$BUILD/bootloader.bin" "$BUILD/partitions.bin" "$BUILD/firmware.bin" ci-out/
+          cp "$BOOT_APP0" ci-out/boot_app0.bin
           esptool.py --chip esp32s3 merge_bin \
-            -o out/CyberMeow-TEmbed-factory.bin \
+            -o ci-out/CyberMeow-TEmbed-factory.bin \
             --flash_mode dio --flash_freq 80m --flash_size 16MB \
-            0x0    out/bootloader.bin \
-            0x8000 out/partitions.bin \
-            0xe000 out/boot_app0.bin \
-            0x10000 out/firmware.bin
-          ls -la out/
+            0x0    ci-out/bootloader.bin \
+            0x8000 ci-out/partitions.bin \
+            0xe000 ci-out/boot_app0.bin \
+            0x10000 ci-out/firmware.bin
+          ls -la ci-out/
+
+      - name: Publish outputs to ci-artifacts branch
+        if: always()
+        run: |
+          cd ci-out
+          # keep the log small (compile errors are at the tail)
+          tail -c 200000 build.log > build.tail.log || true
+          rm -f build.log
+          echo "status: ${{ steps.build.outputs.ok }}  sha: ${GITHUB_SHA}" > STATUS.txt
+          git init -q
+          git checkout -q -b ci-artifacts
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -q -m "CI outputs for ${GITHUB_SHA} (ok=${{ steps.build.outputs.ok }})"
+          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ci-artifacts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload firmware artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: CyberMeow-TEmbed-firmware
-          path: out/
-          if-no-files-found: error
+          path: ci-out/
+          if-no-files-found: warn
